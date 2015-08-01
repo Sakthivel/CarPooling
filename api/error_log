@@ -1,0 +1,30 @@
+[06-Jun-2015 06:50:15 UTC] PHP Fatal error:  Call to undefined function is_cli() in /home/retinafish1234/public_html/sharerides/api/application/libraries/REST_Controller.php on line 953
+[06-Jun-2015 06:53:33 UTC] PHP Fatal error:  Call to undefined function is_cli() in /home/retinafish1234/public_html/sharerides/api/application/libraries/REST_Controller.php on line 953
+[06-Jun-2015 06:54:55 UTC] PHP Fatal error:  Call to undefined function is_cli() in /home/retinafish1234/public_html/sharerides/api/application/libraries/REST_Controller.php on line 953
+[06-Jun-2015 06:54:55 UTC] PHP Fatal error:  Call to undefined function is_cli() in /home/retinafish1234/public_html/sharerides/api/application/libraries/REST_Controller.php on line 953
+[06-Jun-2015 06:55:07 UTC] PHP Fatal error:  Call to undefined function is_cli() in /home/retinafish1234/public_html/sharerides/api/application/libraries/REST_Controller.php on line 953
+[06-Jun-2015 06:58:38 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 31
+[06-Jun-2015 06:59:20 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 31
+[06-Jun-2015 07:12:53 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/auth_model.php on line 22
+[06-Jun-2015 07:13:39 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 75
+[06-Jun-2015 07:13:40 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 45
+[06-Jun-2015 07:13:57 UTC] PHP Fatal error:  Call to a member function like() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 49
+[06-Jun-2015 07:14:52 UTC] PHP Fatal error:  Call to a member function where() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 75
+[06-Jun-2015 07:14:52 UTC] PHP Fatal error:  Call to a member function insert() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 45
+[07-Jun-2015 01:33:23 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:33:23 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:34:01 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:34:01 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:35:17 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:35:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:36:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:36:31 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:36:31 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 158
+[07-Jun-2015 01:58:35 UTC] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 128
+[07-Jun-2015 02:00:05 UTC] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 113
+[07-Jun-2015 02:00:57 UTC] PHP Fatal error:  Call to a member function result_array() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/models/model.php on line 113
+[13-Jun-2015 15:35:53 UTC] PHP Fatal error:  Call to a member function library() on a non-object in /home/retinafish1234/public_html/sharerides/api/application/controllers/services.php on line 47
+[21-Jun-2015 02:29:50 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/retinafish1234/public_html/sharerides/api/application/controllers/services.php on line 81
+[21-Jun-2015 02:29:51 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/retinafish1234/public_html/sharerides/api/application/controllers/services.php on line 81
+[21-Jun-2015 02:30:02 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/retinafish1234/public_html/sharerides/api/application/controllers/services.php on line 81
+[21-Jun-2015 02:30:03 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/retinafish1234/public_html/sharerides/api/application/controllers/services.php on line 81

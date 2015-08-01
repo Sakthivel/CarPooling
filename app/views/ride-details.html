@@ -1,0 +1,124 @@
+<div id="preloader" ng-show="loader">
+    <div class="tb-cell">
+        <div id="page-loading">
+            <div></div>
+            <p>Loading</p>
+        </div>
+    </div>
+</div>
+
+<div id="wrapper" class="rideDetails">
+    <div id="mapView">
+        <map styles="[{stylers:[{hue:'#cccccc'},{saturation : -100}]},{featureType:'road',elementType:'label',stylers:[{visibility:'on'}]},{featureType:'road',elementType :'geometry',stylers:[{lightness : 100},{visibility : 'simplified'}]}]" zoom="14"  map-type-id="MapTypeId.ROADMAP" tilt="45">
+            <directions
+                    draggable="true"
+                    panel="directions-panel"
+                    origin="{{origin}}"
+                    on-directions_changed="directionsChanged(evt)"
+                    destination="{{destination}}">
+            </directions>
+            <marker ng-repeat="pos in markers" position="{{[pos[1], pos[2]]}}"></marker>
+        </map>
+    </div>
+<div id="content">
+    <div class="singleTop">
+
+
+        <div class="summary">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-12">
+                    <div class="summaryItem">
+                        <h1 class="pageTitle">{{originPlace}} → {{destinationPlace}}</h1>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="agentAvatar summaryItem">
+                            <div class="clearfix"></div>
+                            <img class="avatar agentAvatarImg" src="{{profilePicture}}" alt="">
+                            <div class="agentName">{{username}}</div>
+                            <a ng-click="contactDriver()"  class="btn btn-primary">Contact Driver</a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-7 col-sm-9 col-xs-12">
+<div>
+                        <h3 class="nameTxt">{{userName}}<rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating></h3>
+
+
+    </div>
+                        <ul class="icon-list">
+                            <li><i class="fa fa-star"></i> {{age}} year old</li>
+                            <!--<li><i class="fa fa-road"></i> One ride offered</li>-->
+                            <li><i class="fa fa-street-view"></i> Member since: {{createdDate | date : format}}</li>
+                            <li><i class="fa fa-car"></i> Car model : Ford endovure</li>
+                            <li class="{{mobileVerifiedStatus}}">{{mobileVerifiedMsg}}</li>
+                            <li class="{{emailVerifiedStatus}}">{{emailVerifiedMsg}}</li>
+
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9 col-xs-12">
+                        <div class="pricePanel">
+                            ₹ {{price}} <small>per passenger</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="clearfix"></div>
+
+    <div class="additional">
+        <h3>Journey Information</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Departure point </strong>: {{originPlace}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Drop point</strong>: {{destinationPlace}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Departure date</strong>: {{dep_date | date : format}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Departure time</strong>: {{dep_time | date : "h:mma"}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+            <strong>Distance</strong>: {{distance}}
+        </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Travel time</strong>: {{travelTime}}
+            </div>
+
+        </div>
+    </div>
+    <div class="additional">
+        <h3>Additional Information</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Detour</strong>: {{detour}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Schedule flexibility</strong>:{{leave}}
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 amItem">
+                <strong>Luggage size</strong>: {{luggage}}
+            </div>
+
+
+        </div>
+    </div>
+    <div class="description">
+        <h3>Description</h3>
+        <div class="entry-content">
+            <p>{{future_detail}}</p>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+</div>

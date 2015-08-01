@@ -1,0 +1,388 @@
+<div id="wrapper" class="contentWrapper"> 
+    <div class="container">
+<tabset  vertical="true" type="pills">
+     <tab  active="true" >
+        <tab-heading>
+        <i  class="fa fa-list-alt"></i><span>Dashboard</span>
+        </tab-heading>
+        <div class="tabContainer" >
+            <div class="col-lg-12">
+				<div class="dash-head">
+					<div class="left">
+						<h4 class="mb5 text-light">Welcome {{userDetail[0].first_name}}</h4>
+						<p class="small"><strong>AngularJS</strong> admin app</p>
+					</div>
+					
+				</div>
+			</div>
+            
+            
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                  <div class="holder-module">
+                      <div class="panel-heading">Profile Verification</div>
+                      <div class="module-content">
+                          <p class="verified" ng-show="mobile_verify">Phone number verified <i class="fa fa-check-circle"></i></p>
+                           <p class="not-verified" ng-show="mobile_not_verify">Phone number verified <a href="">(Verify)</a></p>
+                           <p class="verified" ng-show="email_verify">Email verified <i class="fa fa-check-circle"></i></p>
+                           <p class="not-verified" ng-show="email_not_verify">Email not verified <a href="">(Verify)</a></p>
+                      </div>
+                  </div>
+              </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                 <div class="holder-module">
+                      <div class="panel-heading">member activity</div>
+                     <div class="module-content">
+                     <p>One ride offered</p>
+                      <p>Member since: 04 February 2014</p>
+                    </div>
+                  </div>
+              </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                 <div class="holder-module">
+                     <div class="panel-heading">your car</div>
+                      <div class="module-content" ng-show="showCarDetail">
+                     <div class="car-img"><img src="app/assets/images/upload/{{carDetails[0].car_picture}}" class="img img-responsive"></div>
+                    <div class="car-info" ng-show="showCarDetail">
+                        <p class="car-name">{{carDetails[0].make_name}} [{{carDetails[0].model_name}} ]</p>  
+                        <p>color: {{carDetails[0].car_color}}</p>
+                        <p>Comfort: {{carDetails[0].car_comfort}}</p>
+                    </div>
+                   
+                     </div>
+                     
+                      <div class="module-content" ng-show="showAddCar">
+                         <div class=""  style="line-height: 58px;">
+                             <button ng-click="data.carTabActive = true" class="btn btn-warning" style="width:100%;">Add a car</button>
+                         </div>
+                   
+                     </div>
+                     
+                  </div>
+              </div>
+            
+             <div class="col-md-12">
+				<div class="dash-head">
+					<div class="left">
+						<h4 class="mb5 text-light">Messages</h4>
+                        <table class="messages-table table">
+                          <tr class="unread" ng-repeat="msg in messages">
+                                <th class="icons" scope="row">
+                                    <input type="checkbox" class="" id="" ></th>
+                                <td class="from"><div><a href="mail-single.php">{{msg.first_name}}</a></div></td>
+                                <td class="summary hidden-xs"><div><a href="mail-single.php">{{msg.message}}</a></div></td>
+                                <td class="date-time text-right"><a href="mail-single.php">8:26 am</a></td>
+                           </tr>
+
+                        </table>
+						
+					</div>
+					
+				</div>
+			</div>
+        </div>
+    </tab>
+    <tab >
+        <tab-heading>
+        <i  class="fa fa-newspaper-o"></i><span>Profile Details</span>
+        </tab-heading>
+        <div class="tabContainer">
+           
+            
+            <div class="singleTop p20">
+          
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 pb20">
+                     <form class="contactForm">
+                <div class="row">
+                  <div class="agent">
+                        <div class="agent-avatar">
+                            <img src="http://mariusn.com/themes/reales-wp/wp-content/uploads/2014/11/avatar.png" alt="Jane Smith">
+                        </div>
+                        <div class="agent-contact">
+                            <h1 class="pageTitle">Senthilnathan</h1>
+                        </div>
+                      
+                    </div>
+                   
+                </div>
+             </form>
+                                        
+                                        
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9 pb20">
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="ca_subject">First name <span class="text-red">*</span></label>
+                            <input type="text" id="ca_subject" name="ca_subject" placeholder="Enter the subject" class="form-control">
+                        </div>
+                    </div>
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="ca_subject">Last name <span class="text-red">*</span></label>
+                            <input type="text" id="ca_subject" name="ca_subject" placeholder="Enter the subject" class="form-control">
+                        </div>
+                    </div>
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="ca_subject">Email <span class="text-red">*</span></label>
+                            <input type="text" id="ca_subject" name="ca_subject" placeholder="Enter the subject" class="form-control">
+                        </div>
+                    </div>
+                    
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="ca_subject">Mobile number <span class="text-red">*</span></label>
+                            <input type="text" id="ca_subject" name="ca_subject" placeholder="Enter the subject" class="form-control">
+                        </div>
+                    </div>
+                    
+                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <label for="ca_subject">Birth year <span class="text-red">*</span></label>
+                            <input type="text" id="ca_subject" name="ca_subject" placeholder="Enter the subject" class="form-control">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="ca_message">Biography <span class="text-red">*</span></label>
+                            <textarea id="ca_message" name="ca_message" placeholder="Type your message" rows="3" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <a href="javascript:void(0);" class="btn btn-green" id="sendMessageBtn">Send Message</a>
+                        </div>
+                    </div>
+                    
+                    
+                  
+                </div>
+            </div>
+            
+           
+           
+        </div>
+            
+            
+        </div>
+    </tab>
+    
+    <tab active="rideOfferTabActive">
+        <tab-heading>
+        <i  class="fa fa-th-list"></i><span>Rides offerd</span>
+        </tab-heading>
+        <div class="tabContainer">
+            {{ridesOffered.length}}
+
+            <div class="alert alert-info" ng-show="noRidesHolder" role="alert">
+                <strong>Ooops !!!!</strong> You don't have any ride to display.
+            </div>
+
+            <div ng-show="ridesDisplay">
+
+           <div class="property-row" ng-repeat="rides in ridesOffered" >
+
+                <div class="property-row-content">
+                    <a href="#/ride-detail/{{rides.id}}">
+                    <h2 class="property-row-title">
+                       <span><i class="fa fa-map-marker"></i></span> {{rides.departure}} -> {{rides.arrival}}
+                    </h2>
+                    </a>
+                    <div class="property-row-location">
+                        <span><i class="fa fa-calendar"></i></span> {{rides.departure_date | date}} - {{rides.departure_time | date : "h:mma"}}
+                    </div>
+
+                    <div class="property-row-meta">
+
+                            <div class="property-row-meta-item">
+
+                                <strong>{{rides.seats}} Seats</strong>
+                            </div>
+                            <div class="property-row-meta-item">
+
+                                <strong>{{rides.price}} per co-traveller</strong>
+                            </div>
+
+                           <div class="options-items pull-right">
+                               <div class="property-row-meta-item">
+
+                                   <strong><a href="#/edit-ride/{{rides.id}}" class="edit" > <i class="fa fa-edit"></i> Edit</a></strong>
+                               </div>
+                               <div class="property-row-meta-item">
+
+                                   <strong><a ng-click="deleteRide(rides.id)" class="delete" > <i class="fa fa-close"></i> Delete</a></strong>
+                               </div>
+                           </div>
+
+                    </div>
+
+                </div>
+            </div>
+                <pre>The selected page no: {{currentPage}}</pre>
+                <pagination  total-items="totalItems" num-pages="noOfPages" current-page="currentPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+            
+        </div>
+        </div>
+    </tab>
+
+    <tab>
+        <tab-heading>
+        <i  class="fa fa-check-circle-o"></i><span>Verification</span>
+        </tab-heading>
+         <div class="tabContainer">
+            I've got an HTML heading, and a select callback. Pretty cool!
+        </div>
+    </tab>
+    <tab >
+        <tab-heading>
+        <i  class="fa fa-car"></i><span>Car Details</span>
+        </tab-heading>
+        <div class="tabContainer">
+            <div class="tabContainerModule">
+                
+
+            <div ng-show="addCarContainer">
+                 <div class="panel-heading">Add Car</div>
+                   <div class="row" style="padding-top:20px;">
+
+                <div class="col-lg-12 pb20" ng-show="addCarFormContainer">
+                    <p>Tell us more about your car! Letting co-travellers know what kind of car you have will make your ride much more popular.</p>
+                    <form novalidate name="carAddForm">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="form-group" ng-class="{ 'has-error' : carAddForm.carMake.$invalid && !carAddForm.carMake.$pristine }">
+                        <label>Make</label>
+                        <select required class="form-control" name="carMake"  ng-model="car.makeModelOpt" ng-change="getMakeData(car.makeModelOpt)">
+                            <option value="">Select a car make</option>
+                          <option ng-repeat="make in carAllMakes" value="{{make.makeid}}">{{make.makename}}</option>
+                            
+                        </select>
+                         <p ng-show="carAddForm.carMake.$invalid && !carAddForm.carMake.$pristine" class="help-block">Please enter departure place.</p>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="form-group" ng-class="{ 'has-error' : carAddForm.carModel.$invalid && !carAddForm.carModel.$pristine }">
+                        <label>Model</label>
+                        <select required class="form-control" name="carModel"      ng-model="car.modelOpt">
+                            <option value="">Select a car modal</option>
+                            <option ng-repeat="make in carAllModels" value="{{make.modelid}}">{{make.modelname}}</option>
+                        </select>
+                        <p ng-show="carAddForm.carModel.$invalid && !carAddForm.carModel.$pristine" class="help-block">Please enter departure place.</p>
+                    </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="form-group" ng-class="{ 'has-error' : carAddForm.carComfort.$invalid && !carAddForm.carComfort.$pristine }">
+                        <label>Comfort</label>
+                        <select required class="form-control" name="carComfort"  ng-model="car.comfort">
+                        <option value="Basic">Basic</option><option value="Normal" selected="selected">Normal</option><option value="Comfortable">Comfortable</option><option value="Luxury">Luxury</option>
+                        </select>
+                        <p ng-show="carAddForm.carComfort.$invalid && !carAddForm.carComfort.$pristine" class="help-block">Please enter departure place.</p>
+                    </div>
+
+
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="form-group" ng-class="{ 'has-error' : carAddForm.carColor.$invalid && !carAddForm.carColor.$pristine }">
+                        <label>Color</label>
+                        
+                        <select required class="form-control" name="carColor"  ng-model="car.color">
+                          <option value="black" selected="selected">black</option><option value="blue">blue</option><option value="dark green">dark green</option><option value="green">green</option><option value="dark blue">dark blue</option><option value="dark grey">dark grey</option><option value="purple">purple</option><option value="brown">brown</option><option value="claret">claret</option><option value="light green">light green</option><option value="light blue">light blue</option><option value="light grey">light grey</option><option value="mauve">mauve</option><option value="red">red</option><option value="pink">pink</option><option value="orange">orange</option><option value="yellow">yellow</option><option value="white">white</option><option value="silver">silver</option><option value="gold">gold</option>
+                        </select>
+                        <p ng-show="carAddForm.carColor.$invalid && !carAddForm.carColor.$pristine" class="help-block">Please enter departure place.</p>
+                    </div>
+
+
+                        
+                        <input type="button" ng-disabled="carAddForm.$invalid" class="btn btn-primary pull-right" ng-click="saveCar(car)" value="Save" />
+                    </div>
+                </form>
+                </div>
+
+
+                   </div>
+
+            </div>
+
+                <div  ng-controller="carPicUploadCtrl" ng-show="carPicUploadContainer">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert alert-success" ng-show="successUpload" role="alert">
+                                Image successfully uploaded....
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>Upload car image</label>
+                            <div class="up-buttons">
+                                <div ngf-select="" ngf-drop="" ng-model="files" ng-model-rejected="rejFiles" ngf-multiple="multiple" ngf-accept="accept" accept="{{acceptSelect}}" ngf-disabled="disabled" ngf-capture="capture" ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}" ngf-min-size="minSize" ngf-max-size="maxSize" ngf-keep="keep" ngf-keep-distinct="keepDistinct" ngf-reset-on-click="resetOnClick" ngf-reset-model-on-click="resetModelOnClick" ngf-allow-dir="allowDir" class="drop-box" ngf-drop-available="dropAvailable">Select File
+                                    <span ng-show="dropAvailable">or Drop</span></div>
+                                <br>
+                            </div>
+                            <div class="progress-container" ng-show="progressContainer">
+                                <progressbar animate="false" value="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="preview">
+                                <div>Preview:</div>
+                                <img style="width:100%;" ngf-src="files[0]" ng-show="files[0].type.indexOf('image') > -1" ngf-accept="'image/*'">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carDetailContainer" ng-show="carDetailContainer">
+                    <div class="panel-heading">Car details</div>
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-lg-6">
+                            <div class="property-row">
+
+                                <div class="property-row-content">
+                                    <div class="car-pic-image">
+                                        <img style="width:100%" src="app/assets/images/upload/{{carDetails[0].car_picture}}" >
+                                    </div>
+                                    <div class="car-details">
+                                        <p class="car-name">{{carDetails[0].make_name}} [{{carDetails[0].model_name}} ]</p>
+                                        <p>color: {{carDetails[0].car_color}}</p>
+                                        <p>Comfort: {{carDetails[0].car_comfort}}</p>
+                                    </div>
+
+                                    <div class="property-row-meta">
+                                        <div class="options-items pull-right">
+
+                                            <div class="property-row-meta-item">
+                                                <strong><a ng-click="deleteCar(carDetails[0].car_id)" class="delete" > <i class="fa fa-close"></i> Delete</a></strong>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+    </tab>
+
+  </tabset>
+        </div>
+</div>

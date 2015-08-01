@@ -1,0 +1,81 @@
+<div id="preloader" ng-show="loader">
+    <div class="tb-cell">
+        <div id="page-loading">
+            <div></div>
+            <p>Loading</p>
+        </div>
+    </div>
+</div>
+<div id="wrapper" class="searchResult">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
+        <div class="filter">
+            <h3>Search results</h3>
+            <form class="filterForm">
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <input type="text" googleplace class="form-control" ng-model="originPlace" options="autoCompleteOptions" ng- autocomplete="off" id="from" placeholder="From" >
+                </div>
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <input type="text" googleplace class="form-control" ng-model="destinationPlace" options="autoCompleteOptions" ng-autocomplete="" autocomplete="off" id="to" placeholder="To">
+                </div>
+                <div  class="priceSlider">
+                  
+                    <div class="form-group ">
+                    <label for="to">Min price</label>
+                    <input type="number"  class="form-control" ng-model="minPrice"  placeholder="Min price">
+                </div>
+                    <div class="form-group ">
+                    <label for="to">Max price</label>
+                    <input type="number"  class="form-control" ng-model="maxPrice"  placeholder="Max price">
+                </div>
+                </div>
+
+                <div class="form-group datepicker">
+                    <label for="to">Date</label>
+                    <input type="text"  class="form-control" ng-model="ridedate"  placeholder="Date">
+                </div>
+                <div class="form-group filterButtonHolder">
+                <button type="button" class="btn btn-success" ng-click="applyFilter()">Apply Filter</button>
+                </div>
+            </form>
+        </div>
+        </div>
+     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+        <div class="resultsList">
+            <div class="alert alert-info" role="alert" ng-show="noResultAlert">
+                Sorry! We have no rides available from {{originPlace}} to {{destinationPlace}} matching your search criteria for now.
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4" ng-repeat="card in cards">
+                    <a href="#/ride-detail/{{card.id}}" class="card" id="card-{{card.id}}">
+                        <div class="figure">
+                            <img class="img" style="width:100%" src="app/assets/images/upload/{{card.car_picture}}" />
+                            <img class="avatar agentAvatarImg" src="http://graph.facebook.com/{{card.userid}}/picture?type=large" alt="">
+                            <div class="figCaption">
+                                <div>Rs {{card.price}}</div>
+                            </div>
+                            <div class="figView"><span class="icon-eye"></span></div>
+                            <div class="figType">New post</div>
+                        </div>
+                        <h2>{{card.userid}}</h2>
+                        <div class="cardAddress">
+                            <span><i class="fa fa-map-marker marker-destination"></i>{{card.departure}}</span>
+                            <span><i class="fa fa-map-marker marker-arrival"></i>{{card.arrival}}</span>
+                            <span><i class="fa fa-clock-o"></i></i>{{card.departure_date | date : format}} - {{card.departure_time | date : "h:mma"}}</span>
+                            <span><i class="fa fa-taxi"></i>{{card.seats}} seats left</span>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+       
+    </div>
+        </div>
+</div>
